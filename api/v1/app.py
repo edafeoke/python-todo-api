@@ -3,20 +3,15 @@
 
 from flask import Flask
 from models import storage
-from api.v1.views import app_views, api
-from flask import Flask, render_template, make_response, jsonify
+from api.v1.views import app_views
+from flask import Flask, make_response, jsonify
 from flask_cors import CORS
 from os import environ
-# from flask_restplus import Api
-
-
-
 
 app = Flask(__name__)
 app.config['JSONIFY_PRETTYPRINT_REGULAR'] = True
 app.register_blueprint(app_views)
 cors = CORS(app, resources={r"/*": {"origins": "0.0.0.0"}})
-# api = Api(app)
 
 @app.teardown_appcontext
 def close_db(error):

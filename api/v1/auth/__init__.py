@@ -2,7 +2,7 @@
 '''auth module'''
 
 import bcrypt
-from flask_restplus import abort
+from flask_restx import abort
 from models import storage
 from sqlalchemy.orm.exc import NoResultFound
 from typing import Union

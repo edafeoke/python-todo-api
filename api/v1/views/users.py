@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """ objects that handle all default RestFul API actions for Users """
 from click import password_option
-from flask_restplus import Resource, fields, model
+from flask_restx import Resource, fields, model
 from models.user import User as Person
 from models import storage
 from api.v1.views import api
